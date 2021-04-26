@@ -2,7 +2,7 @@
 
 const EQUIPOS = ["Boca", "River", "Racing", "Independiente", "Velez"]
 
-const verificarEquipo = equipo => EQUIPOS.includes(equipo) ? true : false
+const verificarEquipo = equipo => EQUIPOS.includes(equipo)
 
 console.log(verificarEquipo("Boca"));
 console.log(verificarEquipo("SacaChispas"));
@@ -22,27 +22,27 @@ console.log(convertirMetroKilometro(3000))
 const ARRAY = [2,7,5,8,9];
 
 //1 - Forma corta
-const contadorArray = array => array.length;
+// const contadorArray = array => array.length;
 
-/* Forma larga
+//Forma larga
 const contadorArray = array => {
     let contador = 0
     while(true){
         if(array[contador]) {
             contador += 1
-        }else{
-            break
+            continue
         }
+        break
     }
     return contador
 }
 
-*/
+
 
 //2 - Forma Corta
-const sumarElementos = array => array.reduce((total, current) => total + current);
+// const sumarElementos = array => array.reduce((total, current) => total + current);
 
-/* Forma Larga
+// /* Forma Larga
 const sumarElementos = array => {
     let total = 0;
     for(let i=0; i < array.length; i++){
@@ -50,12 +50,12 @@ const sumarElementos = array => {
     }
     return total
 }
-*/
+
 
 //3 - Forma Corta
-const elementosOrdenados = array => array.sort((a,b) => a-b)
+// const elementosOrdenados = array => array.sort((a,b) => a-b)
 
-/* Forma Larga
+// /* Forma Larga
 
 const elementosOrdenados = array => {
     for(let j=0; j <= array.length; j++){
@@ -67,7 +67,7 @@ const elementosOrdenados = array => {
     }
     return array
 
-}*/
+}
 
 console.log(contadorArray(ARRAY))
 console.log(sumarElementos(ARRAY))
