@@ -19,7 +19,7 @@ console.log(convertirMetroKilometro(3000))
 2. Crear una función que sume todos los elementos de arreglo
 3. Crear una función que me devuelva los elementos ordenados del arreglo*/
 
-const ARRAY = [2,7,5,8,9];
+const ARRAY = [20,9,8,1,10];
 
 //1 - Forma corta
 // const contadorArray = array => array.length;
@@ -58,14 +58,17 @@ const sumarElementos = array => {
 // /* Forma Larga
 
 const elementosOrdenados = array => {
-    for(let j=0; j <= array.length; j++){
-        for(let i=0; i <= array.length; i++){
-            if(array[i] > array[i+1]){
-                array.splice(i, 2, array[i+1], array[i])
+    if(array.length >= 1){
+        for(let j=0; j <= array.length; j++){
+            for(let i=0; i <= array.length - 2; i++){
+                if(array[i] > array[i+1]){
+                    array.splice(i, 2, array[i+1], array[i])
+                }
             }
         }
+        return array
     }
-    return array
+    return 'Array Vacio'
 
 }
 
